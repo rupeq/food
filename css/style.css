@@ -3,6 +3,10 @@
 	/*свойства width и height задают размеры 
 	не контента, а размеры блока*/
 }
+body{
+	font-family: "Roboto", sans-serif;
+	padding-top: 44px;
+}
 .container{
 	max-width: 1200px;
 	margin: auto;
@@ -13,22 +17,28 @@
 	align-items: center;
 	justify-content: space-between;
 	/*по краям с одинаковым расстоянием*/
+	margin-bottom: 40px;
 }
-.search-input{
+.input{
 	/* Gray / gray-1 */
 	background: #FFFFFF;
 	/* Gray / gray-5 */
 	border: 1px solid #D9D9D9;
-	box-sizing: border-box;
 	border-radius: 2px;
-	height: 40px;
-	width: 690px;
 	font-size: 16px;
 	line-height: 24px;
-	background-image: url(../assets/Vector.svg);
+	padding: 8px;
+	padding-left: 35px;
 	background-repeat: no-repeat;
 	background-position: left 11px center;
-	padding-left: 35px;
+}
+.input-address{
+	width: 690px;
+	background-image: url(../assets/Vector.svg);
+}
+.input-search{
+	width: 300px;
+	background-image: url(../assets/search.svg);
 }
 .buttons{
 	display: flex;
@@ -63,4 +73,134 @@
 }
 .button-icon{
 	margin-right: 6px;
+}
+.promo{
+	box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+	/* Calendula Gold / gold-2 */
+	background: #FFF1B8 url(../assets/food-promo.png) no-repeat top -100px right -247px / 924px;
+	border-radius: 10px;
+	padding: 38px 70px;
+	height: 300px;
+	margin-bottom: 56px;
+}
+.promo-title{
+	font-size: 39px;
+	line-height: 46px;
+}
+.promo-text{
+	font-style: normal;
+	font-weight: normal;
+	max-width: 540px;
+	font-size: 24px;
+	line-height: 28px;
+}
+.section-heading{
+	display: flex;
+	-ms-align-items: cen;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 44px;
+}
+.section-title{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 42px;
+	color: #000000;
+	margin: 0;
+}
+.cards{
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	/*если карточка не помещается - перенос на другую строчку*/
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	/*флексы выравниваются в начале поперечной оси контейнера*/
+	justify-content: space-between;
+}
+.card{
+	/* Gray / gray-1 */
+	background: #FFFFFF;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+	border-radius: 7px;
+	overflow: hidden;
+	/*скрывает все, что за пределеами*/
+	margin-bottom: 30px;
+}
+.card-image{
+	width: 384px;
+	height: 250px;
+	object-fit: cover;
+	/*размер сам высчитывается*/
+}
+.card-text{
+	padding-top: 20px;
+	padding-bottom: 35px;
+	padding-left: 23px;
+	padding-right: 23px;
+}
+.card-heading{
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+}
+.card-title{
+	margin: 0;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
+}
+.card-tag{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 20px;	
+	color: #ffffff;
+	background: #262626;
+	border-radius: 2px;
+	padding: 1px 8px;
+}
+.card-info{
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.rating{
+	margin-right: 26px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 32px;
+	/* identical to box height, or 178% */
+	color: #FFC107;
+}
+.price, 
+.category{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 32px;
+	/* identical to box height, or 178% */
+	/* Gray / gray-7 */
+	color: #8C8C8C;
+}
+.price{
+	margin-right: 10px;
+}
+/*точка after price*/
+.price:after{
+	content: "";
+	width: 5px;
+	height: 5px;
+	background-color: #8C8C8C;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50%;
+	margin-left: 10px;
 }
